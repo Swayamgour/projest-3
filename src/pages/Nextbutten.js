@@ -4,10 +4,13 @@ import Butten from '../Atom/Butten'
 import { TfiTwitterAlt } from "react-icons/tfi";
 // import { GrGoogle } from "react-icons/gr";
 import { useNavigate } from 'react-router-dom';
+import {  validPassword } from './regex1';
+
 
 
 function Login() {
   const[state,setState]=useState("")
+  const[password,setPassword]=useState(false)
 
    const  handelinput =(e)=>{
 
@@ -15,14 +18,20 @@ function Login() {
     
      console.log(e.target.value)
    }
+ const Forget=()=>{
+  if (!validPassword.test(password)) {
+    setPassword(true);
 
-   const nevigate = useNavigate()
-      const Forgetpas=()=>{
-       
-         nevigate('/Forget')
-      }
- 
-    
+ }
+ localStorage.setItem("PasswordRegister",password)
+ if( localStorage.getItem('PasswordLogin') === localStorage.getItem('PasswordRegister') ){
+  return  alert("Login sucessful ✅")
+}else{
+  return alert("Login unsucessful ⚠️")
+}
+
+ }
+  
 
   return (
     <>
@@ -41,30 +50,18 @@ function Login() {
        &nbsp;
       
        &nbsp;
-      
-
-
-
-      
-     
-              &nbsp;
+            &nbsp;
               <input placeholder='password' className={style.input} onChange={handelinput}/>
               &nbsp;
               <Butten
        buttenText="Next"
-       
+       onClick={Forget}
        className={style.But} />
        &nbsp;
       
        &nbsp;
        &nbsp; &nbsp;
-       
-             
-            
-
-          
-
-      </div>
+        </div>
       </div>   
     
     

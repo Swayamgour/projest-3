@@ -34,7 +34,7 @@ function Singnewpage() {
       localStorage.setItem("NameRegister",usename)
       localStorage.setItem("EmailRegister",phone)
       localStorage.setItem("PasswordRegister",password)
-      setButten([])
+      setButten(' ')
    };
   
 
