@@ -35,9 +35,9 @@ function Login() {
 
      <div className={style.main}>
       <div className={style.center}>
-      &nbsp;
+     
        <TfiTwitterAlt className={style.tfi}/>
-       &nbsp;
+      
        <h1 className={style.h2}>Sign in to Twitter</h1>
        &nbsp;
       
@@ -48,9 +48,10 @@ function Login() {
            <br/>
            <br/>
 
-           
-
-              <input placeholder='Phone' className={style.inpu} onChange={handelinput}/>
+           <input placeholder='Phone' className={style.inpu} onChange={handelinput}/>
+                <br/>
+                <br/>
+              <input placeholder='Password' className={style.inpu} onChange={handelinput}/>
               <br/>
               <h5 className={style.h2}>Date of birth</h5>
               <ul className={style.li}>
@@ -68,7 +69,7 @@ function Login() {
                
            <br/>
            <Butten
-       buttenText="Next"
+       buttenText="Submit"
       
        className={style.But} />
         </div>

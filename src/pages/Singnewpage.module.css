@@ -54,7 +54,7 @@
 }
 .input{
     background-color: black;
-    padding: 0.5rem 1rem;
+    /* padding: 0.5rem 1rem; */
     color: white;
     border: 1px solid white;
     border-radius: 8px;
@@ -65,7 +65,7 @@
 }
 .inpu{
     background-color: black;
-    padding: 0.5rem 1rem;
+    /* padding: 0.5rem 1rem; */
     color: white;
     border: 1px solid white;
     border-radius: 8px;
@@ -83,7 +83,7 @@
     box-shadow: 2px 3px 6px 2px;
     width: 28rem;
     margin-left: 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
     cursor: pointer;
     height: 3rem;
     font-size: larger;
