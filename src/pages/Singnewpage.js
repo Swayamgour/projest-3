@@ -2,32 +2,43 @@ import React, { useState } from 'react'
 import style from './Singnewpage.module.css'
 import Butten from '../Atom/Butten'
 import { TfiTwitterAlt } from "react-icons/tfi";
-// import { GrGoogle } from "react-icons/gr";
-import { useNavigate } from 'react-router-dom';
-import Box from '@mui/material/Box';
-import TextField from '@mui/material/TextField';
+import { validEmail, validPassword , validusername} from './regex1';
 
 
-function Login() {
-  const[state,setState]=useState("")
 
-   const  handelinput =(e)=>{
 
-     setState(e.target.value)
-    
-     console.log(e.target.value)
-   }
-
-   const nevigate = useNavigate()
-      const Forgetpas=()=>{
-       
-         nevigate('/Forget')
+function Singnewpage() {
+  const[butten,setButten]=useState([])
+   const[phone,setPhone]=useState("")
+   const[password,setPassword]=useState("")
+   const[usename,setUsername]=useState("")
+  
+   const [emailErr, setEmailErr] = useState(false);
+   const [usernm, setUsernm] = useState(false);
+   const [pwdError, setPwdError] = useState(false);
+ 
+   const Submit = () => {
+      if (!validEmail.test(phone)) {
+         setEmailErr(true);
       }
-      const Nextbutten=()=>{
-       
-        nevigate('/Nextbutten')
-     }
-    
+      if (!validusername.test(usename)) {
+         setUsernm(true);
+      }
+      if (!validPassword.test(password)) {
+         setPwdError(true);
+      }
+
+      if(phone === "" || usename === "" || password=== ""){
+        alert("please fill all the field something")
+       }
+      localStorage.setItem("NameRegister",usename)
+      localStorage.setItem("EmailRegister",phone)
+      localStorage.setItem("PasswordRegister",password)
+      setButten([])
+   };
+  
+
+ 
     
 
   return (
@@ -44,14 +55,14 @@ function Login() {
        
               &nbsp;
              
-              <input placeholder='Name' className={style.input} onChange={handelinput}/>
+              <input placeholder='Name' className={style.input} type="name" onChange={(e) => setUsername(e.target.value)}/>
            <br/>
            <br/>
 
-           <input placeholder='Phone' className={style.inpu} onChange={handelinput}/>
+           <input placeholder='Phone' className={style.inpu} type="email" onChange={(e) => setPhone(e.target.value)}/>
                 <br/>
                 <br/>
-              <input placeholder='Password' className={style.inpu} onChange={handelinput}/>
+              <input placeholder='Password' className={style.inpu}  type="password" onChange={(e) => setPassword(e.target.value)}/>
               <br/>
               <h5 className={style.h2}>Date of birth</h5>
               <ul className={style.li}>
@@ -62,15 +73,15 @@ function Login() {
                 business, a pet, or something else.
                 </li>
               </ul>
-              <div className={style.div}><input placeholder='Month' className={style.inp1} onChange={handelinput}/>
+              <div className={style.div}><input placeholder='Month' className={style.inp1} />
               
-              <input placeholder='Day' className={style.inp2} onChange={handelinput}/>
-              <input placeholder='Year' className={style.inp3} onChange={handelinput}/></div>
+              <input placeholder='Day' className={style.inp2} />
+              <input placeholder='Year' className={style.inp3} /></div>
                
            <br/>
            <Butten
        buttenText="Submit"
-      
+       onClick={Submit}
        className={style.But} />
         </div>
       </div>   
@@ -81,7 +92,7 @@ function Login() {
   )
 }
 
-export default Login
+export default Singnewpage
 
 
 

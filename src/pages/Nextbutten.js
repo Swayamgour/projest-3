@@ -48,7 +48,7 @@ function Login() {
       
      
               &nbsp;
-              <input placeholder='Email,phone, usename' className={style.input} onChange={handelinput}/>
+              <input placeholder='password' className={style.input} onChange={handelinput}/>
               &nbsp;
               <Butten
        buttenText="Next"

@@ -4,10 +4,11 @@ import Butten from '../Atom/Butten'
 import { TfiTwitterAlt } from "react-icons/tfi";
 import { GrGoogle } from "react-icons/gr";
 import { useNavigate } from 'react-router-dom';
-
+import { validEmail} from './regex1';
 
 function Login() {
   const[state,setState]=useState("")
+  const[phone,setPhone]=useState(false)
 
    const  handelinput =(e)=>{
    
@@ -24,11 +25,24 @@ function Login() {
 
 
       const Nextbutten=()=>{
-        
+        if (!validEmail.test(phone)) {
+          setPhone(true);
+       }
 
         (state=="")?(alert("plese fill the input field")):
         nevigate('/Nextbutten')
+        localStorage.setItem("EmailRegister",phone)
+
+        if(localStorage.getItem('EmailLogin') === localStorage.getItem('EmailRegister') ){
+          return  alert("email is correct ✅")
+      }else{
+          return alert("email is not correct⚠️")
+      }
+
      }
+
+
+  
     
 
   return (
@@ -75,7 +89,8 @@ function Login() {
        className={style.Butt} />
        &nbsp;
        &nbsp; &nbsp;
-       <h5 className={style.h5}>Don't have an account? <a href='Singup' className={style.a}>Singup</a></h5>
+       <h5 className={style.h5}>Don't have an account?
+        <a href='Singup' className={style.a}>Singup</a></h5>
              
             
 
