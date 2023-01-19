@@ -7,12 +7,12 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import Singup from './pages/Singup';
-import Login from './pages/Login'
-import Input from './Input/Input';
-import Forget from './pages/Forget';
-import Nextbutten from './pages/Nextbutten'
-import Singnewpage from './pages/Singnewpage';
+import Singup from './pages/Singup/Singup';
+import Login from './pages/LogIn/Login'
+import Home from './Home/Home';
+import Forget from './pages/ForgetPage/Forget';
+import Nextbutten from './pages/NextButten/Nextbutten'
+import Singnewpage from './pages/SingButten/Singnewpage';
 
 const router = createBrowserRouter([
   {
@@ -24,8 +24,8 @@ const router = createBrowserRouter([
     element: <Singup/>,
   },
   {
-    path: "Input",
-    element: <Input />,
+    path: "Home",
+    element: <Home />,
   },
   {
     path: "Login",
