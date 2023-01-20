@@ -1,0 +1,25 @@
+.navbar{
+    width: 35%;
+    height: 20vh;
+    border: 1px solid black;
+    position: fixed;
+   
+}
+.header{
+    width: 100%;
+    height: 10vh;
+    border: 1px solid white;
+    /* align-items: flex-start; */
+   
+}
+.headersmall{
+    width: 100%;
+    height: 10vh;
+    /* border: 1px solid black; */
+    display: flex;
+    justify-content: space-around;
+    cursor: pointer;
+}
+.For:hover{
+    border-color: #000;
+}

@@ -1,0 +1,15 @@
+.pic{
+    display: flex;
+    justify-content: space-around;
+}
+.pic2{
+    color: black;
+    margin-right: 20px;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+.follow:hover{
+  background-color: #6495ED;
+  transform: scale(1.3);
+
+}

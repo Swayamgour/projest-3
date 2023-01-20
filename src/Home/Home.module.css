@@ -2,6 +2,7 @@
     width: 100%;
     height: 100vh;
     display: flex;
+   
 
     
 }
@@ -13,12 +14,15 @@
 .LeftSide{
     width: 20%;
     height: 100vh;
+    /* padding-left: 8rem; */
+    /* position: fixed; */
    
 }
 .middleside{
     width: 35%;
     height: 100vh;
-    background-color: blueviolet;
+    background-color:white;
+    border: 1px solid black;
 }
 .rightside{
     width: 30%;

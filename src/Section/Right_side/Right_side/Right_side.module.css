@@ -1,0 +1,55 @@
+.input{
+     border: 1px solid rgb(232,232,232); 
+     background-color: rgb(232,232,232);
+     color: white;
+    font-weight: 900;
+     width:15rem ;
+     height: 1.8rem;
+     cursor: pointer;
+     position: sticky;
+    
+  
+}
+.display{
+    display: flex;
+    /* border: 1px solid black; */
+    width: 18rem;
+    margin-left: 1rem;
+    margin-top: .5rem;
+    height: 2.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    font-weight: 700;
+    background-color: rgb(232,232,232);
+    cursor: pointer;
+    position: fixed;
+   
+}
+.display:hover{
+    background-color: wheat;
+}
+.arrayItem{
+    width:18rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    /* border: 1px solid black; */
+    height: 25rem; 
+    border-radius: 10px;
+    background-color: rgb(240,240,240);
+    cursor: pointer;
+
+}
+.arraystore{
+    width: 18rem;
+    margin-left: 1rem;
+    margin-top: 1rem;
+    height: 16rem; 
+    border-radius: 10px;
+    background-color: rgb(240,240,240);
+    cursor: pointer;
+    /* border: 1px solid black; */
+
+}

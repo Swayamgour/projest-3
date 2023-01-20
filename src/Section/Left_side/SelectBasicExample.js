@@ -3,6 +3,7 @@ import React from "react";
 import {AiFillSketchCircle  } from "react-icons/ai";
 import './select.css'
 import { TfiTwitterAlt } from "react-icons/tfi";
+import { Avatar } from '@mui/material';
 
 
 function SelectBasicExample() {
@@ -11,10 +12,12 @@ function SelectBasicExample() {
        borderRadius:"50px" ,
        textAlign:"center",
        border:'1px white',
+       backgroundColor:"rgb(232,232,232)",
        
        
        height:"4rem"}} aria-label="Default select example">
-        <option> <TfiTwitterAlt />
+        <option>
+        <Avatar alt='akkc' src = 'https://assets.gqindia.com/photos/625e8bd9fcfaab5b0ecc5ef1/3:2/w_1620,h_1080,c_limit/MS%20Dhoni.jpeg'/>
             swayamGaur@gmail.com....
            </option>
         <option value="1">Swayam@gmail.com</option>

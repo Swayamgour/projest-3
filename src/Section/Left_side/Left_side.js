@@ -83,11 +83,6 @@ import SelectBasicExample from './SelectBasicExample'
      <span className={style.logo}>{menuItems.icon}</span>
       <span className={style.text}>{menuItems.Name}</span>
     </div>
-    
-    
-    
-    
-
     )
     })}
     <div className={style.button}>
@@ -100,7 +95,7 @@ import SelectBasicExample from './SelectBasicExample'
         open={open}
       >
          
-         <DialogActions style={{width:"50rem", height:"20rem"  }}>
+         <DialogActions style={{width:"40rem", height:"20rem"  }}>
            
         </DialogActions>
         
