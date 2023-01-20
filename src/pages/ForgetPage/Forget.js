@@ -32,7 +32,7 @@ function Forget() {
        <TfiTwitterAlt className={style.tfi}/>
        &nbsp;
        <h1 className={style.h2}>Find your Twitter account</h1>
-       <li className={style.h6}>Enter the email, phone number, or username associated with your account to </li>
+       <li className={style.h6}>Enter the email, phone number, or swayam gaur associated with your account to </li>
        <li className={style.h6}>change your password.</li>
        &nbsp;
       <br/>

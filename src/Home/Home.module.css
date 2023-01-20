@@ -5,13 +5,18 @@
 
     
 }
-.LeftSide{
-    width: 30%;
+.space{
+    width: 15%;
     height: 100vh;
-    background-color: aqua;
+}
+
+.LeftSide{
+    width: 20%;
+    height: 100vh;
+   
 }
 .middleside{
-    width: 40%;
+    width: 35%;
     height: 100vh;
     background-color: blueviolet;
 }

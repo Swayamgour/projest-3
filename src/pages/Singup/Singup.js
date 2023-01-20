@@ -112,7 +112,7 @@ function Login() {
        className={style.But} />
        &nbsp;
        <ul>
-     <li className={style.li}> By signing up, you agree to the Terms of Service </li>
+     <li className={style.li}> By signing up, Swayam Gaur to the Terms of Service </li>
     <li  className={style.li}>  and Privacy Policy, including Cookie Use.</li>
     </ul> 
        &nbsp;

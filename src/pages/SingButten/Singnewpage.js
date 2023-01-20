@@ -85,7 +85,7 @@ function Singnewpage() {
               <h5 className={style.h2}>Date of birth</h5>
               <ul className={style.li}>
                 <li > 
-                This will not be shown publicly. Confirm your own age, even if this  
+                This will not be shown publicly. Swayam Gaur own age, even if this  
                 </li>
                 <li>
                 business, a pet, or something else.
