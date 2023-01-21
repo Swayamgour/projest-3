@@ -11,6 +11,13 @@ function StoreArr() {
 
   const logo = <img style={{width:'40px',height:'40px' , borderRadius:"50%"}} src = 'https://assets.gqindia.com/photos/625e8bd9fcfaab5b0ecc5ef1/3:2/w_1620,h_1080,c_limit/MS%20Dhoni.jpeg'/>
 
+  const logo1 = <img style={{width:'40px',height:'40px' , borderRadius:"50%"}} src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWdyUU1HiHVhrir8Zt3dv4m3BrfOh8NFNmHw&usqp=CAU'/>
+
+  const logo2 = <img style={{width:'40px',height:'40px' , borderRadius:"50%"}} src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQrhSXpTLlkXIq5B3Ukn6FKg7TEl5pmrqSupA&usqp=CAU'/>
+
+  const logo3 = <img style={{width:'40px',height:'40px' , borderRadius:"50%"}} src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS2mPVMGN9Vi3Zylub1jXgeQX14AzCiX7U0A&usqp=CAU'/>
+
+
   const handelclick=()=>{
    setToogle(!toogle);
   }
@@ -24,7 +31,7 @@ function StoreArr() {
 
     },
     {
-      pic:logo,
+      pic:logo1,
       name:"Rahul_Gandhi",
       verified:img,
       butten:"Follow"
@@ -32,7 +39,7 @@ function StoreArr() {
 
    },
    {
-    pic:logo,
+    pic:logo2,
     name:"Swayansh_gaur",
     verified:img,
     butten:"Follow"
@@ -40,7 +47,7 @@ function StoreArr() {
 
  },
  {
-  pic:logo,
+  pic:logo3,
   name:"Swayam_Gaur",
   verified:img,
   butten:"Follow"
@@ -52,6 +59,7 @@ function StoreArr() {
    
   return (
            <>
+           <div className={style.storecard}>
            <h2 style={{marginLeft:"50px", marginTop:"0px"}}>Who to follow</h2>
            {
             Item.map((Item)=>{
@@ -65,6 +73,8 @@ function StoreArr() {
              
               <button className={style.follow} style={{width:"5rem", marginBottom:"22px" , height:"2rem", borderRadius:"20px"}}  onClick={handelclick}>{toogle ? "following" : "follow"}</button>
               </div>
+              
+              
              
               </>
               
@@ -73,7 +83,7 @@ function StoreArr() {
            }
           
        
-         
+          </div>
          
          </>
   )

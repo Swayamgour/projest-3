@@ -1,6 +1,4 @@
-import { style } from '@mui/system'
 import React from 'react'
-// import style from './StoreData.module.css'
 
 function StoreData() {
  const Item =[
@@ -33,6 +31,7 @@ function StoreData() {
 
   return (
    <>
+   <div style={{marginTop:"3.5rem"}}>
    <h2 style={{marginLeft:"30px", marginTop:"0px"}}>
         What’s happening</h2>
      
@@ -56,7 +55,7 @@ function StoreData() {
           })
         }
         <h4 style={{marginLeft:"15px", marginTop:"2px" , color:"rgb(29, 155, 240)"}}>Show more</h4>
-
+        </div>
    </>
   )
 }

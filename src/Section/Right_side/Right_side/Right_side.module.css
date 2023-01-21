@@ -6,7 +6,9 @@
      width:15rem ;
      height: 1.8rem;
      cursor: pointer;
-     position: sticky;
+    position: sticky;
+
+    
     
   
 }
@@ -26,6 +28,7 @@
     background-color: rgb(232,232,232);
     cursor: pointer;
     position: fixed;
+    
    
 }
 .display:hover{

@@ -15,6 +15,7 @@ import { margin } from '@mui/system';
 
   return (
     <>
+   
     <div className={style.display}>
         <BsSearch/>
        <Input     placeholder="  Search Twitter"  value='search' text className={style.input} />

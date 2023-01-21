@@ -72,8 +72,8 @@ import SelectBasicExample from './SelectBasicExample'
 ]
   return (
     <> 
-     
-     <TfiTwitterAlt className={style.tfi}/>
+     <div className={style.position}>
+     <TfiTwitterAlt className={style.twitterLogo}/>
        
     
      
@@ -86,7 +86,7 @@ import SelectBasicExample from './SelectBasicExample'
     )
     })}
     <div className={style.button}>
-    <Button   style={{ marginRight:"1.9rem" ,width:"12rem",height:"3rem",borderRadius:"2rem",backgroundColor:"#6495ED",color:"white"}}  onClick={handleClickOpen}>
+    <Button  className={style.main1}  style={{ marginRight:"1.9rem" ,width:"12rem",height:"3rem",borderRadius:"2rem",backgroundColor:"#6495ED",color:"white"}}  onClick={handleClickOpen}>
         Tweet
       </Button>
       <BootstrapDialog
@@ -95,14 +95,15 @@ import SelectBasicExample from './SelectBasicExample'
         open={open}
       >
          
-         <DialogActions style={{width:"40rem", height:"20rem"  }}>
-           
+         <DialogActions style={{width:"20rem", height:"15rem"  }}>
+           <button className={style.twitterbutten}>tweet</button>
         </DialogActions>
         
       </BootstrapDialog>
     </div>
     <div >
     <SelectBasicExample  className={style.email}/>
+    </div>
     </div>
  
     </>
