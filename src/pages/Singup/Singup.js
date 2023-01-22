@@ -108,7 +108,7 @@ function Login() {
             
               <Butten
        buttenText="Sign up with Phone or email"
-       onClick={signnewpage}
+       onClick={handelinput}
        className={style.But} />
        &nbsp;
        <ul>

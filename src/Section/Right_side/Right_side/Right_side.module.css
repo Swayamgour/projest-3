@@ -1,12 +1,13 @@
 .input{
      border: 1px solid rgb(232,232,232); 
      background-color: rgb(232,232,232);
-     color: white;
+     /* color: white; */
     font-weight: 900;
      width:15rem ;
      height: 1.8rem;
      cursor: pointer;
     position: sticky;
+    outline: none;
 
     
     
@@ -32,7 +33,7 @@
    
 }
 .display:hover{
-    background-color: wheat;
+    background-color: rgb(232,232,232);
 }
 .arrayItem{
     width:18rem;
@@ -46,6 +47,17 @@
 
 }
 .arraystore{
+    width: 14rem;
+    margin-left: 1rem;
+    margin-top: 2rem;
+    height: 14rem; 
+    border-radius: 10px;
+    background-color: rgb(240,240,240);
+    cursor: pointer;
+    /* border: 1px solid black; */
+
+}
+.arraycard{
     width: 18rem;
     margin-left: 1rem;
     margin-top: 1rem;
@@ -53,6 +65,15 @@
     border-radius: 10px;
     background-color: rgb(240,240,240);
     cursor: pointer;
-    /* border: 1px solid black; */
-
+    display: flex;
+}
+.tooglebutten{
+    width: 4rem;
+    height: 16rem;
+    /* padding-top: 3rem; */
+    margin-top: 3rem;
+    margin-right: 1rem;
+}
+.follow:hover{
+    background-color:#6495ED ;
 }

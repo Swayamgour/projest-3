@@ -1,10 +1,13 @@
 import React from 'react'
 
 function StoreData() {
+  const img = <img style={{width:'15px',height:'15px'}} src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/1200px-Twitter_Verified_Badge.svg.png'/>
+
  const Item =[
     {
         Trending:"Indian Premier League · Trending",
         Name: "#MSDhoni",
+        threedot:"img",
         follwer:"2,241 Tweets"
       },
       {
@@ -46,7 +49,7 @@ function StoreData() {
                 
                  <div style={{marginLeft:"15px", marginTop:"0px", fontWeight:400 ,     fontfamily: "Twitter",
                    }}> {Item.Trending}</div>
-                 <div style={{marginLeft:"15px", marginTop: "0px" , fontWeight:700}}>{Item.Name}</div>
+                 <div style={{marginLeft:"15px", marginTop: "0px" , fontWeight:700}}>{Item.Name} {Item.img}</div>
                   <div style={{marginLeft:"15px", marginTop:"0px",fontWeight:200}}>{Item.follwer}</div>
                 
             </div>

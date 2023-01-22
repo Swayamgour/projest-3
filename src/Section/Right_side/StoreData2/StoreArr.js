@@ -5,7 +5,7 @@ import style from '../StoreData2/StoreArr.module.css'
 
 function StoreArr() {
 
-      const[toogle,setToogle]= useState(false)
+    
 
   const img = <img style={{width:'15px',height:'15px'}} src='https://upload.wikimedia.org/wikipedia/commons/thumb/e/e4/Twitter_Verified_Badge.svg/1200px-Twitter_Verified_Badge.svg.png'/>
 
@@ -18,9 +18,7 @@ function StoreArr() {
   const logo3 = <img style={{width:'40px',height:'40px' , borderRadius:"50%"}} src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS2mPVMGN9Vi3Zylub1jXgeQX14AzCiX7U0A&usqp=CAU'/>
 
 
-  const handelclick=()=>{
-   setToogle(!toogle);
-  }
+ 
 
   const Item = [
     {
@@ -60,22 +58,21 @@ function StoreArr() {
   return (
            <>
            <div className={style.storecard}>
-           <h2 style={{marginLeft:"50px", marginTop:"0px"}}>Who to follow</h2>
+           <h3 style={{marginLeft:"30px", marginTop:"-20px"}}>Who to follow</h3>
            {
             Item.map((Item)=>{
              return(
               <>
               <div className={style.pic}>
               <div className={style.pic1}>{Item.pic}</div> 
-              <div  className={style.pic2}>{
-               Item.name
-              } {Item.verified}</div>
+              <div  className={style.pic2}>
+              { Item.name}
+               {Item.verified}</div>
              
-              <button className={style.follow} style={{width:"5rem", marginBottom:"22px" , height:"2rem", borderRadius:"20px"}}  onClick={handelclick}>{toogle ? "following" : "follow"}</button>
               </div>
               
-              
              
+              
               </>
               
              )
@@ -84,6 +81,7 @@ function StoreArr() {
           
        
           </div>
+           
          
          </>
   )

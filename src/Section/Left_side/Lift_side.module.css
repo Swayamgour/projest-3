@@ -61,3 +61,35 @@
 .twitterbutten{
     margin-top: 10ram;
 }
+.profile{
+   
+    border: 1px solid white;
+    margin-top: -10rem;
+    display: flex;
+    justify-content: space-around;
+}
+.logo2{
+    margin-right: 1rem;
+    margin-top: 14rem;
+    color: #6495ED;
+}
+.logo1{
+    margin-right: 1rem;
+    color: #6495ED;
+}
+.input{
+    border: none;
+    /* width: 15rem; */
+    outline: none;
+}
+.butten{
+    border-radius: 10px;
+    color: white;
+    background-color: #6495ED;
+    border: 1px solid white;
+    margin-left: 8rem;
+
+}
+.butten:hover{
+    transform: scale(1.1);
+}
