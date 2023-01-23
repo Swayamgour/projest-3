@@ -16,6 +16,7 @@ import { TfiTwitterAlt } from "react-icons/tfi";
 import SelectBasicExample from './SelectBasicExample'
 import { HiPhotograph,HiChat } from "react-icons/hi";
 import { BsEmojiSmile ,BsFillChatTextFill ,BsApple } from "react-icons/bs";
+import { useNavigate } from 'react-router-dom';
 // import CardArray from './Card_array/CardArray';
 
   function Left_side() {
@@ -29,6 +30,10 @@ import { BsEmojiSmile ,BsFillChatTextFill ,BsApple } from "react-icons/bs";
       padding: theme.spacing(1),
     },
   }));
+   const nevigate = useNavigate()
+  const login =()=>{
+    nevigate('/Login')
+  }
   
 
   const handleClickOpen = () => {
@@ -83,13 +88,13 @@ import { BsEmojiSmile ,BsFillChatTextFill ,BsApple } from "react-icons/bs";
     {menuItems.map((menuItems)=>{
     return( 
     <div className={style.main}>
-     <span className={style.logo}>{menuItems.icon}</span>
-      <span className={style.text}>{menuItems.Name}</span>
+     <span className={style.logo}  onClick={login}>{menuItems.icon}</span>
+      <span className={style.text} onClick={login}>{menuItems.Name}</span>
     </div>
     )
     })}
     <div className={style.button}>
-    <Button  className={style.main1}  style={{ marginRight:"1.9rem" ,width:"12rem",height:"3rem",borderRadius:"2rem",backgroundColor:"#6495ED",color:"white"}}  onClick={handleClickOpen}>
+    <Button  style={{ marginLeft:"1.7rem" ,width:"12rem",height:"3rem",borderRadius:"2rem",backgroundColor:"#6495ED",color:"white"}}  onClick={handleClickOpen}>
         Tweet
       </Button>
       <BootstrapDialog
@@ -118,7 +123,7 @@ import { BsEmojiSmile ,BsFillChatTextFill ,BsApple } from "react-icons/bs";
         
       </BootstrapDialog>
     </div>
-    <div >
+    <div className={style.profilediv} >
     <SelectBasicExample  className={style.email}/>
     </div>
     </div>

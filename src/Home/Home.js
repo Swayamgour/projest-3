@@ -1,5 +1,4 @@
 import React from 'react'
-import Input from '../Atom/input_field/Input'
 import style from '../Home/Home.module.css'
 import Right_side from '../Section/Right_side/Right_side/Right_side'
 import Left_side from '../Section/Left_side/Left_side'

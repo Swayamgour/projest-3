@@ -6,13 +6,8 @@
     margin-left: 1rem ;
     color: blue;
 }
-/* .arrayItam1{
-    margin-left: 30px;
-    padding: 1rem;
-} */
 
-.arrayItam1{
-    margin-right: rem;
-    color: red;
-    
+.position{
+    position: fixed;
+    background-color: red;
 }

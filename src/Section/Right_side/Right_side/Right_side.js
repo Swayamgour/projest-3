@@ -33,7 +33,7 @@ import { margin } from '@mui/system';
 
   return (
     <>
-   
+   <div className={style.positoin}>
     <div className={style.display}>
         <BsSearch/>
        <Input     placeholder="  Search Twitter"  value='search' text className={style.input} />
@@ -43,6 +43,7 @@ import { margin } from '@mui/system';
     <div className={style.arrayItem}>
        <StoreData />
     </div>
+
     </div>
     <div className={style.arraycard}>
     <div className={style.arraystore}>
@@ -60,6 +61,7 @@ import { margin } from '@mui/system';
             <button className={style.follow} style={{width:"5rem", marginBottom:"12px" , height:"2rem", borderRadius:"20px"}}  onClick={handelclick1}>{toogle1 ? "following" : "follow"}</button>
             <button className={style.follow} style={{width:"5rem", marginBottom:"12px" , height:"2rem", borderRadius:"20px"}}  onClick={handelclick2}>{toogle2 ? "following" : "follow"}</button>
             <button className={style.follow} style={{width:"5rem", marginBottom:"20px" , height:"2rem", borderRadius:"20px"}}  onClick={handelclick3}>{toogle3 ? "following" : "follow"}</button>
+    </div>
     </div>
     </div>
     </>
