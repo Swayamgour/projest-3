@@ -2,14 +2,12 @@ import React, { useState } from 'react'
 import style from './Nextbutten.module.css'
 import Butten from '../../Atom/Butten'
 import { TfiTwitterAlt } from "react-icons/tfi";
-import {  validPassword } from '../regex1';
 import { useNavigate } from 'react-router-dom';
 
 
 
 function Nextbutten() {
   const[state,setState]=useState("")
-  // const[password,setPassword]=useState(false)
  
 
   const  handelinput =(e)=>{
@@ -18,10 +16,8 @@ function Nextbutten() {
   
   const nevigate = useNavigate()
       const Forget=()=>{
-          //  if (validPassword.test(state)) {
              
-              // setPassword(true);
-           (state === "" )? 
+           (state === ""  )? 
         alert("please fill the Password field "): nevigate('/Home')
 
           localStorage.setItem("Password",state)

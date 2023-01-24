@@ -32,7 +32,7 @@ import { useNavigate } from 'react-router-dom';
   }));
    const nevigate = useNavigate()
   const login =()=>{
-    nevigate('/Login')
+    nevigate('/Profile')
   }
   
 
@@ -45,34 +45,42 @@ import { useNavigate } from 'react-router-dom';
   const  menuItems=[
    
   {
+    id:1,
       icon:<HomeIcon/>,
       Name: "Home",
     },
     {
+    id:2,
       icon:<TagIcon/>,
       Name:"Explore",
     },
-    {
+    { 
+    id:3,
       icon:< GrNotification/>,
       Name:"Notification",
     },
     {
+      id:4,
       icon:< FiMail />,
       Name:"Messages ",
     },
     {
+      id:5,
       icon:<MdBookmarkBorder/>,
       Name:"Bookmarks",
     },
     {
+      id:6,
       icon:< BsCardChecklist />,
       Name:"List",
     },
     {
+      id:7,
       icon:<BsPerson/>,
       Name:"Profile",
     } ,
     {
+      id:8,
       icon:<CgMoreO/>,
       Name:"More",
     },
@@ -87,9 +95,10 @@ import { useNavigate } from 'react-router-dom';
      
     {menuItems.map((menuItems)=>{
     return( 
-    <div className={style.main}>
-     <span className={style.logo}  onClick={login}>{menuItems.icon}</span>
-      <span className={style.text} onClick={login}>{menuItems.Name}</span>
+    <div className={style.main}  onClick={login}>
+  
+     <span className={style.logo}  >{menuItems.icon}</span>
+      <span className={style.text} >{menuItems.Name}</span>
     </div>
     )
     })}

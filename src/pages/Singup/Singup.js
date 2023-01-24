@@ -50,22 +50,11 @@ import { useNavigate } from 'react-router-dom';
 
 
 function Login() {
-  const[state,setState]=useState("")
-
-   const  handelinput =(e)=>{
-
-     setState(e.target.value)
-    
-     console.log(e.target.value)
-   }
+ 
 
    const nevigate = useNavigate()
-      const Forgetpas=()=>{
-       
-         nevigate('/Forget')
-      }
-     
-      const signnewpage =()=>{
+      
+      const handelinput =()=>{
        
          nevigate('/Singnewpage')
       }

@@ -13,6 +13,7 @@ import Home from './Home/Home';
 import Forget from './pages/ForgetPage/Forget';
 import Nextbutten from './pages/NextButten/Nextbutten'
 import Singnewpage from './pages/SingButten/Singnewpage';
+import Profile from './LeftSecList/Profile/Profile';
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,9 @@ const router = createBrowserRouter([
   {
     path: "Singnewpage",
     element: <Singnewpage />,
+  }, {
+    path: "Profile",
+    element: <Profile />,
   }
 ]);
 

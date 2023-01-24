@@ -1,4 +1,4 @@
-.Trending{
+/* .Trending{
     color: black;
 }
 .arrayItam{
@@ -10,4 +10,68 @@
 .position{
     position: fixed;
     background-color: red;
-}
+} */
+
+
+
+
+.keywords {
+    right: 0;
+    width:90%;
+    color: black;
+    margin-top: 2.4rem;
+  
+  }
+  .key {
+    background  : rgb(232,232,232);
+    padding: 0.45rem;
+    border-radius: 5px;
+    border-radius: 15px;
+    width: 17rem;
+    margin-top: 1rem;
+  }
+  .keyword__heading {
+    font-size: 1.25rem;
+    padding-bottom: 0.8rem;
+    padding-left: 0.8rem;
+  }
+  .country {
+    font-size: 0.875rem;
+    color: black;
+    font-weight: 300;
+    margin-top: -1rem;
+  }
+  
+  .keyword__tweets {
+    margin-top: 0.1rem;
+    color: black;
+    font-size: 0.75rem;
+    font-weight: 300;
+  }
+  
+  .heading4{
+    color:black;
+    margin-top: -.5rem;
+  }
+  
+  .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 0.50rem;
+  }
+  
+  .container:hover{
+    background-color: white;
+  }
+  
+  .btn1{
+    color: black;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+    cursor: pointer;
+    
+  }

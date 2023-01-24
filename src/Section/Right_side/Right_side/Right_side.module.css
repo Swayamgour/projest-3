@@ -1,6 +1,5 @@
 .positoin{
     position: fixed;
-    z-index: -1;
 }
 
 
@@ -13,7 +12,7 @@
      width:15rem ;
      height: 1.8rem;
      cursor: pointer;
-    position: sticky;
+    /* position: sticky; */
     outline: none;
 
     
@@ -22,6 +21,7 @@
 }
 .display{
     display: flex;
+
     /* border: 1px solid black; */
     width: 18rem;
     margin-left: 1rem;
@@ -47,7 +47,7 @@
     margin-left: 1rem;
     margin-top: 4rem;
     /* border: 1px solid black; */
-    height: 25rem; 
+    height: auto; 
     border-radius: 10px;
     background-color: rgb(240,240,240);
     cursor: pointer;
@@ -55,7 +55,7 @@
 
 }
 .arraystore{
-    width: 14rem;
+    width: 11.5rem;
     margin-left: 1rem;
     margin-top: 2rem;
     height: 14rem; 
