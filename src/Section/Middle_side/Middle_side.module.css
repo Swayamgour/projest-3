@@ -1,91 +1,48 @@
-.navbar{
-    width: 27.5rem;
-    height: 20vh;
-    border: 1px solid rgb(232,232,232);
-    position: fixed;
-    /* position: sticky; */
-
-    background-color:white ;
-    opacity: .9;
-    /* z-index: 1; */
-    
-   
-}
-.header{
-    /* width: 100%; */
-    height: 10vh;
-    border: 1px solid white;
-
-}
-.headersmall{
-    /* width: 100%; */
-    height: 10vh;
-    /* border: 1px solid black; */
-    display: flex;
-    justify-content: space-around;
-    cursor: pointer;
-}
-.For:hover{
-    border-color: #000;
-}
-
-.profile{
-    /* width: 35rem; */
-    height: 12vh;
-    border: 1px solid white;
-    margin-top: 7.2rem;
-    display: flex;
-    justify-content: space-around;
-}
-.profile1{
-    width: 27.5rem;
-    height: 4vh;
-    border: 1px solid white;
-    margin-left: 0rem;
-    /* justify-content: space-around; */
-    display: flex;
-    color: #6495ED;
-
-   
-}
-.logo{
-    margin-left: 4rem;
-}
-.logo1{
-    margin-left: 1rem;
-}
 
 
-.input{
-   width: 15rem;
-   height: 3rem;
-   background-color: white;
-   border: 1px solid white;
-   
-    /* margin-left: rem; */
-   align-items:center;
-   margin-top: .5rem;
-   margin-right: 8rem;
-   outline: none;
-}
-.butten{
-    border-radius: 10px;
-    color: white;
-    background-color: #6495ED;
-    border: 1px solid white;
-    margin-left: 8rem;
 
-}
-.butten:hover{
-    transform: scale(1.2);
-}
-.scrool{
-    width: 27.5rem;
-    border: 1px solid rgb(232,232,232);
-    height: 13rem;
-   
-    
-}
-.cardArray{
-    margin-top: 2rem;
+@media screen and (min-width: 1024px)  {
+
+    .postWrapper{
+        border:0.5px solid lightgray ;
+        flex: 2 ;
+        /* background-color: red; */
+        /* overflow: auto; */
+    }
+    .header{
+        border-bottom: 0.5px solid lightgray;
+        padding : 0 1rem;
+        /* position: fixed; */
+        /* opacity: 0.3; */
+        /* background-color: transparent; */
+        /* padding-top: 1rem; */
+        /* padding-bottom: 2rem; */
+    }
+    .heading{
+        font-size: calc(20rem/16);
+        font-weight: 700;
+        /* justify-content: space-around; */
+        /* margin-top: 3rem; */
+    }
+    .headerOptionWrapper{
+        font-size: 1rem;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 1rem 0;
+        /* margin-top: 3rem; */
+
+        /* padding-top: 1rem; */
+        /* padding-bottom: 1.5rem; */
+        cursor: pointer;
+        
+    }
+    .postsWrapper{
+        overflow: auto;
+        max-height: 100%;
+    }
+    .postsWrapper::-webkit-scrollbar{
+        display: none;
+    }
 }

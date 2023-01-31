@@ -1,13 +1,33 @@
 import React, { Profiler, useState } from 'react'
 // import Butten from '../../Atom/Butten'
 import style from '../Profile/Profile.module.css'
-
+import Left_side from '../../Section/Left_side/Left_side'
+import Right_side from '../../Section/Right_side/Right_side/Right_side'
 
 
 function Profile(){
+
+
+    
+
+
     return(
         <>
-            <div className={style.userprofilecontainer}>
+              
+
+
+            <div className={style.Main}>
+    <div className={style.space}></div>
+    <div className={style.LeftSide}>
+     <Left_side/>
+    </div>
+    
+    
+  
+
+    
+            <div className={style.middleside}>
+            {/* <div className={style.middleside}> */}
                 <div className={style.cover}></div>
                 <div className={style.userprofile}>
                     <div className={style.useractions}>
@@ -32,6 +52,15 @@ function Profile(){
                          <span>News tips? Share them here: </span>
                     </div>
                 </div>
+            </div>
+            <div>
+                
+                {/* </div> */}
+                </div>
+
+            <div className={style.rightside}>
+       <Right_side />
+    </div>
             </div>
         </>
     )

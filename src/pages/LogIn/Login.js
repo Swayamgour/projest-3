@@ -4,10 +4,19 @@ import Butten from '../../Atom/Butten'
 import { TfiTwitterAlt } from "react-icons/tfi";
 import { useNavigate } from 'react-router-dom';
 import { validEmail} from '../regex1';
+import { useRecoilState } from 'recoil';
+// import { isSineinupatom } from '../../Recoil';  
+import { isLoginAtom } from '../../Recoil';
+
+
 
 function Login() {
   const[state,setState]=useState("")
    const[phone,setPhone]=useState(false)
+   
+   const setlogin = useRecoilState(isLoginAtom)
+   
+
 
    const  handelinput =(e)=>{
    
@@ -19,11 +28,13 @@ function Login() {
 
    const nevigate = useNavigate()
       const Forgetpas=()=>{
+        // setlogin = (true)
         nevigate('/Forget')
       }
        const Nextbutten=()=>{
        
         if (validEmail.test(state))
+       
            nevigate('/Nextbutten') 
           setPhone(true)
           if(state === "" ){

@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 function Input({ onChange ,className ,placeholder}) {
   return (
@@ -14,3 +14,11 @@ function Input({ onChange ,className ,placeholder}) {
 }
 
 export default Input
+
+
+
+
+
+
+
+

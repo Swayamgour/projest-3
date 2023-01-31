@@ -1,39 +1,23 @@
-/* .Trending{
-    color: black;
-}
-.arrayItam{
-    padding: 10px;
-    margin-left: 1rem ;
-    color: blue;
-}
-
-.position{
-    position: fixed;
-    background-color: red;
-} */
-
-
-
-
 .keywords {
     right: 0;
-    width:90%;
+    width:18rem;
     color: black;
     margin-top: 2.4rem;
   
   }
   .key {
+    width: 18rem;
     background  : rgb(232,232,232);
     padding: 0.45rem;
     border-radius: 5px;
     border-radius: 15px;
-    width: 17rem;
     margin-top: 1rem;
   }
   .keyword__heading {
     font-size: 1.25rem;
     padding-bottom: 0.8rem;
     padding-left: 0.8rem;
+    width: 20rem;
   }
   .country {
     font-size: 0.875rem;

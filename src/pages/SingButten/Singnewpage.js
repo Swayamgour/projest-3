@@ -4,7 +4,9 @@ import Butten from '../../Atom/Butten'
 import { TfiTwitterAlt } from "react-icons/tfi";
 import { validEmail, validPassword , validusername} from '../regex1';
 import { useNavigate } from 'react-router-dom';
-
+import { useRecoilState } from 'recoil';
+// import { isSineinupatom } from '../../Recoil';  
+import { isLoginAtom } from '../../Recoil';
 
 
 
@@ -17,14 +19,19 @@ function Singnewpage() {
    const [usernm, setUsernm] = useState(false);
    const [pwdError, setPwdError] = useState(false);
  
-  
+    const isLogin = useRecoilState(isLoginAtom) 
       const nevigate = useNavigate()
         const Submit = () => {
    
   
       if (validEmail.test(phone)) {
-        nevigate('/Home')
+        // nevigate('/Home')
          setEmailErr(true);
+         if(isLogin == true) {
+          isLogin(true)
+          alert("adddd")
+          nevigate('/Home')
+      }
       }
       if (validusername.test(usename)) {
          setUsernm(true);

@@ -14,6 +14,7 @@ const DialogBox2 = (props) => {
     setOpen(newOpen);
   };
   return (
+    
     <Popover
       content={<a onClick={props.onClick}>🙁  Is Not Intrested</a>}
       title=" 😒 This trend is harmful or spammy"
@@ -21,6 +22,7 @@ const DialogBox2 = (props) => {
       open={open}
       overlayInnerStyle={{
         color: "#fff",
+        
         background: "white",
         border: "1px solid #fff",
       }}

@@ -14,6 +14,7 @@ import Forget from './pages/ForgetPage/Forget';
 import Nextbutten from './pages/NextButten/Nextbutten'
 import Singnewpage from './pages/SingButten/Singnewpage';
 import Profile from './LeftSecList/Profile/Profile';
+import { RecoilRoot } from 'recoil';
 
 const router = createBrowserRouter([
   {
@@ -21,7 +22,7 @@ const router = createBrowserRouter([
     element: <App />,
   },
   {
-    path: "Singup",
+    path: "/Singup",
     element: <Singup/>,
   },
   {
@@ -53,7 +54,8 @@ const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
     {/* <App /> */}
-    <RouterProvider router={router} />
+    <RecoilRoot> <RouterProvider router={router} /></RecoilRoot>
+   
   </React.StrictMode>
 );
 

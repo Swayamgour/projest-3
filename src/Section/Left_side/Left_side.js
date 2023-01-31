@@ -47,7 +47,7 @@ import { useNavigate } from 'react-router-dom';
   {
     id:1,
       icon:<HomeIcon/>,
-      Name: "Home",
+    Name: <spam  onClick={() => nevigate("/Home")}> Home</spam>,
     },
     {
     id:2,
@@ -77,7 +77,8 @@ import { useNavigate } from 'react-router-dom';
     {
       id:7,
       icon:<BsPerson/>,
-      Name:"Profile",
+      Name: <spam  onClick={() => nevigate("/Profile")}> Profile</spam>,
+
     } ,
     {
       id:8,
@@ -89,13 +90,13 @@ import { useNavigate } from 'react-router-dom';
   return (
     <> 
      <div className={style.position}>
-     <TfiTwitterAlt className={style.twitterLogo}/>
+     <TfiTwitterAlt className={style.twitterLogo}  onClick={() => nevigate("/Home")}/>
        
     
      
     {menuItems.map((menuItems)=>{
     return( 
-    <div className={style.main}  onClick={login}>
+    <div className={style.main} >
   
      <span className={style.logo}  >{menuItems.icon}</span>
       <span className={style.text} >{menuItems.Name}</span>

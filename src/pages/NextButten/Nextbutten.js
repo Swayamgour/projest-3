@@ -3,11 +3,16 @@ import style from './Nextbutten.module.css'
 import Butten from '../../Atom/Butten'
 import { TfiTwitterAlt } from "react-icons/tfi";
 import { useNavigate } from 'react-router-dom';
-
+import { useRecoilState } from 'recoil';
+// import { isSineinupatom } from '../../Recoil';  
+import { isLoginAtom } from '../../Recoil';
 
 
 function Nextbutten() {
   const[state,setState]=useState("")
+
+  // const setLogin = useRecoilState(isSineinupatom)
+   const isLogin = useRecoilState(isLoginAtom)
  
 
   const  handelinput =(e)=>{
@@ -16,18 +21,21 @@ function Nextbutten() {
   
   const nevigate = useNavigate()
       const Forget=()=>{
-             
-           (state === ""  )? 
-        alert("please fill the Password field "): nevigate('/Home')
+        isLogin(true)
+        nevigate('/Forget')
+        
+        
 
           localStorage.setItem("Password",state)
           
           if( localStorage.getItem('Password') === localStorage.getItem('PasswordRegister') ){
           return  alert("Login sucessful ✅")
+          
             }else{
                return alert("Login unsucessful ⚠️")
-        }
-
+        
+         
+            }
       }
   
 
