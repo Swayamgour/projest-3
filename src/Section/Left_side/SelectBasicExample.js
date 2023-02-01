@@ -22,11 +22,11 @@ function Home() {
 	return (
 		<>
 			<div  >
-				<select style={{width:"13rem", height:"2rem" , marginLeft:"2rem" , marginTop:"3rem", borderRadius:"20px"}} className={style.email}  >
+				<select style={{width:"13rem", height:"2rem" , marginLeft:"2rem" , marginTop:"3rem", borderRadius:"20px"}} className={style.email}  onClick={handelclick} >
 
 					<option>    
                      Swayam@gmail.com</option>
-					<option onClick={handelclick}>Log Out</option>
+					<option>Log Out</option>
 				</select>
         </div>
 		</>
