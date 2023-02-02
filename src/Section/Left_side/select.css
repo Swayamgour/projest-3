@@ -9,3 +9,11 @@
     background-color: red;
 
 }
+.logout{
+    /* background-color: black; */
+    width: 70%;
+    margin-right: 15rem;
+    border-radius: 30px;
+    /* padding-top: 5rem; */
+    outline: none;
+}

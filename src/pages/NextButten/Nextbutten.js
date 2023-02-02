@@ -40,7 +40,7 @@ const [isLog, setIsLog] = useRecoilState(isLoginAtom);
   const nevigate = useNavigate()
       const Forget=()=>{
         setIsLog(true);
-            alert("adddd")
+            // alert("adddd")
               nevigate('/')
         
 
