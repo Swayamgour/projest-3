@@ -52,8 +52,8 @@ export default function Posts () {
             <header className={style.header}>
                 <p className={style.heading}>Home</p>
                 <div className={style.headerOptionWrapper}>
-                    <span>For You</span>
-                    <span>Following</span>
+                    <p style={{marginRight:"12rem"}}>For You</p>
+                   <p>Following</p> 
                 </div>
             </header>
 

@@ -18,34 +18,38 @@ function Singnewpage() {
   const [emailErr, setEmailErr] = useState(false);
    const [usernm, setUsernm] = useState(false);
    const [pwdError, setPwdError] = useState(false);
+   const [isLog, setIsLog] = useRecoilState(isLoginAtom);
+
  
     const isLogin = useRecoilState(isLoginAtom) 
       const nevigate = useNavigate()
+      console.log(isLog)
         const Submit = () => {
    
-  
-      if (validEmail.test(phone)) {
-        // nevigate('/Home')
-         setEmailErr(true);
-         if(isLogin == true) {
-          isLogin(true)
-          alert("adddd")
-          nevigate('/Home')
-      }
-      }
-      if (validusername.test(usename)) {
-         setUsernm(true);
-      }
-      if (validPassword.test(password)) {
-         setPwdError(true);
-      }
+          // if (validEmail.test(phone)) {
+            // nevigate('/Home')
+            // setEmailErr(true);
+            // if(!isLogin == true) {
+             setIsLog(true);
+             console.log(isLog)
+              // alert("adddd")
+              nevigate('/')
+              // alert("ahghgsjhgasjahjg")
+      // }
+      // }
+      // if (validusername.test(usename)) {
+      //    setUsernm(true);
+      // }
+      // if (validPassword.test(password)) {
+      //    setPwdError(true);
+      // }
 
-      if(phone === "" || usename === "" || password=== ""){
-        alert("please fill all the field something ⚠️")
-       }
-      localStorage.setItem("NameRegister",usename)
-      localStorage.setItem("EmailRegister",phone)
-      localStorage.setItem("PasswordRegister",password)
+      // if(phone === "" || usename === "" || password=== ""){
+      //   alert("please fill all the field something ⚠️")
+      //  }
+      // localStorage.setItem("NameRegister",usename)
+      // localStorage.setItem("EmailRegister",phone)
+      // localStorage.setItem("PasswordRegister",password)
      
    };
   

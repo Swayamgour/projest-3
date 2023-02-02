@@ -2,16 +2,16 @@ import { atom } from "recoil";
 
 export const isLoginAtom = atom({
   key: "isLogin",
-  default: true,
+  default: false,
 });
 export const newlyAddedPostAtom = atom ({
   key : 'newlyAddedPost',
-  default : null
+  default : {}
 })
 
 export const loggedInUserAtom  = atom ({
   key : 'loggedInUser' ,
-  default : null 
+  default : {}
 })
 
 

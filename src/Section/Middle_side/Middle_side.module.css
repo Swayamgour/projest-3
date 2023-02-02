@@ -6,17 +6,19 @@
     .postWrapper{
         border:0.5px solid lightgray ;
         flex: 2 ;
+        /* height: 8vh; */
         /* background-color: red; */
         /* overflow: auto; */
     }
     .header{
         border-bottom: 0.5px solid lightgray;
+        background-color: rgb(232,232,232);
         padding : 0 1rem;
-        /* position: fixed; */
-        /* opacity: 0.3; */
-        /* background-color: transparent; */
-        /* padding-top: 1rem; */
-        /* padding-bottom: 2rem; */
+        position: fixed;
+        width: 27.4rem;
+        z-index: 999;
+        opacity: 0.9;
+
     }
     .heading{
         font-size: calc(20rem/16);
@@ -27,9 +29,10 @@
     .headerOptionWrapper{
         font-size: 1rem;
         font-weight: 700;
+       
         display: flex;
         align-items: center;
-        justify-content: space-around;
+        justify-content: space-between;
         padding: 1rem 0;
         /* margin-top: 3rem; */
 
@@ -41,6 +44,8 @@
     .postsWrapper{
         overflow: auto;
         max-height: 100%;
+        padding-top: 10rem;
+
     }
     .postsWrapper::-webkit-scrollbar{
         display: none;

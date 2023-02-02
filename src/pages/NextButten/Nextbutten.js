@@ -8,8 +8,26 @@ import { useRecoilState } from 'recoil';
 import { isLoginAtom } from '../../Recoil';
 
 
+ 
+    // const isLogin = useRecoilState(isLoginAtom) 
+    //   const nevigate = useNavigate()
+    //   console.log(isLog)
+    //     const Submit = () => {
+   
+    //       // if (validEmail.test(phone)) {
+    //         // nevigate('/Home')
+    //         // setEmailErr(true);
+    //         // if(!isLogin == true) {
+    //          setIsLog(true);
+    //          console.log(isLog)
+    //           // alert("adddd")
+    //           nevigate('/')
+
+
 function Nextbutten() {
   const[state,setState]=useState("")
+const [isLog, setIsLog] = useRecoilState(isLoginAtom);
+
 
   // const setLogin = useRecoilState(isSineinupatom)
    const isLogin = useRecoilState(isLoginAtom)
@@ -21,18 +39,18 @@ function Nextbutten() {
   
   const nevigate = useNavigate()
       const Forget=()=>{
-        isLogin(true)
-        nevigate('/Forget')
-        
+        setIsLog(true);
+            alert("adddd")
+              nevigate('/')
         
 
           localStorage.setItem("Password",state)
           
           if( localStorage.getItem('Password') === localStorage.getItem('PasswordRegister') ){
-          return  alert("Login sucessful ✅")
-          
-            }else{
-               return alert("Login unsucessful ⚠️")
+            
+            return alert("Login unsucessful ⚠️")
+          }else{
+            return  alert("Login sucessful ✅")
         
          
             }

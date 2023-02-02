@@ -17,6 +17,7 @@ import SelectBasicExample from './SelectBasicExample'
 import { HiPhotograph,HiChat } from "react-icons/hi";
 import { BsEmojiSmile ,BsFillChatTextFill ,BsApple } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
+import Tweet from '../Middle_side/Tweet';
 // import CardArray from './Card_array/CardArray';
 
   function Left_side() {
@@ -114,7 +115,7 @@ import { useNavigate } from 'react-router-dom';
       >
          
          <DialogActions style={{width:'25rem', height:'16rem'}} >
-        <div className={style.profile}>
+        {/* <div className={style.profile}>
          <img style={{width:'3rem',height:'3rem' ,padding:'.3rem', borderRadius:"50%" }} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxI8k6VYzsB5fNKN-6mrFfvNgoDQkWppXR4Q&usqp=CAU'></img>
        <input className={style.input} placeholder='what,s happening?'/> 
         </div> 
@@ -128,7 +129,8 @@ import { useNavigate } from 'react-router-dom';
        <button className={style.butten}>Tweet</button>
              
      
-       </div>
+       </div> */}
+       <Tweet />
         </DialogActions>
         
       </BootstrapDialog>
