@@ -145,6 +145,7 @@ const Trends = () => {
       totalKeywords: "2000k Tweets",
     },
   ]);
+
   const [selectedId, setSelectedId] = useState(null);
   const updateId = (id) => setSelectedId(id);
   const HandleClick = () => {

@@ -5,50 +5,57 @@ import { TfiTwitterAlt } from "react-icons/tfi";
 import { useNavigate } from 'react-router-dom';
 import { validEmail} from '../regex1';
 import { useRecoilState } from 'recoil';
-// import { isSineinupatom } from '../../Recoil';  
 import { isLoginAtom } from '../../Recoil';
 
 
 
-function Login() {
-  const[state,setState]=useState("")
-   const[phone,setPhone]=useState(false)
+ export default function Login() {
+
+   let list =  JSON.parse(localStorage.getItem("list"))
+   console.log(list)
+
+
+  const[email,setEmail]=useState("")
+  
    
    const setlogin = useRecoilState(isLoginAtom)
    
-
+    
 
    const  handelinput =(e)=>{
-   
-     setState(e.target.value)
+    setEmail(e.target.value)
 
-    
-     console.log(e.target.value)
    }
 
    const nevigate = useNavigate()
       const Forgetpas=()=>{
-        // setlogin = (true)
         nevigate('/Forget')
       }
+
+
+
        const Nextbutten=()=>{
+       let MatchData = list.filter((x)=>x.email===email)
+       if(MatchData.length > 0){
+         alert("you email is valid ")
+         nevigate('/Nextbutten')
+       }
+       else if(email === ""){
+        alert("please fill Email fild ⚠️")
+       }
+       else{
+        alert("register First")
+       }
+
        
-        if (validEmail.test(state))
-       
-           nevigate('/Nextbutten') 
-          setPhone(true)
-          if(state === "" ){
-            alert("please fill the gmail field ⚠️")
-           }
-          //  localStorage.setItem("gmail",phone)
-          // if(localStorage.getItem('gmail')=== localStorage.getItem('EmaailRegister')){
-          //   alert('correct Email')
-          // }
+      }   
          
-        }
+       const navigrateignuppage =()=>{
+        nevigate('/Singup')
+       }
+      
         
-        
-return (
+        return (
          <>
 
      <div className={style.main}>
@@ -93,93 +100,13 @@ return (
        className={style.Butt} />
        &nbsp;
        &nbsp; &nbsp;
-       <h5 className={style.h5}>Don't have an account?
-        <a href='Singup' className={style.a}>Singup</a></h5>
+      
+         <h5 className={style.h5}>Don't have an account?  
+           <span  style={{color
+          :"blue"}} onClick={navigrateignuppage}> Singup</span> </h5>
+        
          </div>
       </div>  
     </>
      )
 }
-
-export default Login
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// function Login() {
-//   return (
-//    <>
-//     <h2 className={style.h2}>
-//         welcome to Login pages
-//     </h2>
-
-
-//    </>
-//   )
-// }
-
-// export default Login
-// import * as React from 'react';
-
-// import Dialog from '@mui/material/Dialog';
-// import Box from '@mui/material/Box';
-// import DialogContentText from '@mui/material/DialogContentText';
-// import Input from '../Input/Input';
-
-
-// export default function AlertDialog() {
-//   const [open, setOpen] = React.useState(true);
-
- 
-
-//   return (
-//     <div>
-      
-//       <Dialog
-//         open={open}
-//          >
-//             <input className={style.input} placeholder='keyboard'/>
-//             <br/>
-//             <br/>
-//             <input placeholder='keyboard'/>
-        
-//     <span> <h2>welcome to twitter</h2> 
-    
-//     <input placeholder='keyboard'/>
-//      <h5>welcome</h5></span>
-     
-//       </Dialog>
-//     </div>
-//   );
-// }

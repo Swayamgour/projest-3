@@ -4,28 +4,11 @@ import Butten from '../../Atom/Butten'
 import { TfiTwitterAlt } from "react-icons/tfi";
 import { useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
-// import { isSineinupatom } from '../../Recoil';  
 import { isLoginAtom } from '../../Recoil';
 
-
- 
-    // const isLogin = useRecoilState(isLoginAtom) 
-    //   const nevigate = useNavigate()
-    //   console.log(isLog)
-    //     const Submit = () => {
-   
-    //       // if (validEmail.test(phone)) {
-    //         // nevigate('/Home')
-    //         // setEmailErr(true);
-    //         // if(!isLogin == true) {
-    //          setIsLog(true);
-    //          console.log(isLog)
-    //           // alert("adddd")
-    //           nevigate('/')
-
-
 function Nextbutten() {
-  const[state,setState]=useState("")
+  let list = JSON.parse(localStorage.getItem("list"))
+  const[password,setPassword]=useState("")
 const [isLog, setIsLog] = useRecoilState(isLoginAtom);
 
 
@@ -34,26 +17,26 @@ const [isLog, setIsLog] = useRecoilState(isLoginAtom);
  
 
   const  handelinput =(e)=>{
-    setState(e.target.value)
+    setPassword(e.target.value)
   }
   
   const nevigate = useNavigate()
-      const Forget=()=>{
+      const Submit=()=>{
+       let matchPassword= list.filter((x)=>x.password===password)
+       console.log(matchPassword ," i am password")
+       if(matchPassword.length > 0){
+        alert("Login sucessful ✅")
         setIsLog(true);
-            // alert("adddd")
-              nevigate('/')
-        
+        nevigate('/')
+  
+       }
+       else if(password===''){
+        alert("please fill the password field")
+       }
+       else{
+        alert("Login unsucessful ⚠️")
+       }
 
-          localStorage.setItem("Password",state)
-          
-          if( localStorage.getItem('Password') === localStorage.getItem('PasswordRegister') ){
-            
-            return alert("Login unsucessful ⚠️")
-          }else{
-            return  alert("Login sucessful ✅")
-        
-         
-            }
       }
   
 
@@ -78,8 +61,8 @@ const [isLog, setIsLog] = useRecoilState(isLoginAtom);
               <input placeholder='password'  type='password' className={style.input} onChange={handelinput}/>
               &nbsp;
               <Butten
-       buttenText="Next"
-       onClick={Forget}
+       buttenText="Submit"
+       onClick={Submit}
        className={style.But} />
        &nbsp;
       

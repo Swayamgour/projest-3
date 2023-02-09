@@ -1,59 +1,74 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import style from './Singnewpage.module.css'
 import Butten from '../../Atom/Butten'
 import { TfiTwitterAlt } from "react-icons/tfi";
-import { validEmail, validPassword , validusername} from '../regex1';
+// import { validEmail, validPassword , validusername} from '../regex1';
 import { useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
 // import { isSineinupatom } from '../../Recoil';  
 import { isLoginAtom } from '../../Recoil';
+import { ValidEmail} from '../../Helper'
+import {validatPassword } from '../../Helper'
+import {validusername } from '../../Helper'
 
 
 
 function Singnewpage() {
  
-   const[phone,setPhone]=useState('')
    const[password,setPassword]=useState('')
-   const[usename,setUsername]=useState('')
-  const [emailErr, setEmailErr] = useState(false);
-   const [usernm, setUsernm] = useState(false);
-   const [pwdError, setPwdError] = useState(false);
+   const[email,setEmail]=useState('')
+   const [username, setusername] = useState("");
+   const [message, setMessage] = useState("");
+   const [pwmessage, setPwMessage] = useState("");
+   const [uMes, setUMes] = useState("");
+   const[data,setData]=useState([])
+  //  const [show, setShow] = useState(false)
    const [isLog, setIsLog] = useRecoilState(isLoginAtom);
-
  
     const isLogin = useRecoilState(isLoginAtom) 
-      const nevigate = useNavigate()
+      const Nav = useNavigate()
       console.log(isLog)
-        const Submit = () => {
-   
-          // if (validEmail.test(phone)) {
-            // nevigate('/Home')
-            // setEmailErr(true);
-            // if(!isLogin == true) {
-             setIsLog(true);
-             console.log(isLog)
-              // alert("adddd")
-              nevigate('/')
-              // alert("ahghgsjhgasjahjg")
-      // }
-      // }
-      // if (validusername.test(usename)) {
-      //    setUsernm(true);
-      // }
-      // if (validPassword.test(password)) {
-      //    setPwdError(true);
-      // }
-
-      // if(phone === "" || usename === "" || password=== ""){
-      //   alert("please fill all the field something ⚠️")
-      //  }
-      // localStorage.setItem("NameRegister",usename)
-      // localStorage.setItem("EmailRegister",phone)
-      // localStorage.setItem("PasswordRegister",password)
-     
-   };
-  
+      useEffect(()=>{
+        if (localStorage.getItem('list')) {
+          let data1 = JSON.parse(localStorage.getItem('list'));
+          setData(data1);
+        }
+      },[])
+       
+      const userEmailAdd = (e)=>{
+        setEmail(e.target.value)
+        const validation  = ValidEmail(email)
+        setMessage(validation)
+      }
+      const userPassword=(e)=>{
+        setPassword(e.target.value)
+        const validation = validatPassword(password) 
+        setPwMessage(validation)
+      }
     
+    const UserNAme1 =(e)=>{
+      setusername(e.target.value)
+      const validation = validusername(username)
+      setUMes(validation)
+    }
+    const Submit =()=>{
+      if (message === "true"  && uMes === "true" && pwmessage === "true"){
+        const obj = {
+          name: username,
+          password: password,
+          email: email,
+        };
+        data.push(obj)
+        setData([...data])
+        localStorage.setItem("list" , JSON.stringify(data))
+        // alert("Congratulations! You have successfully signed up!  🎉");
+          setIsLog(true)
+           Nav('/')
+      }else{
+        alert("Enter correct Ditial")
+      }
+
+    }
  
     
 
@@ -75,23 +90,26 @@ function Singnewpage() {
               <input className={style.input}
               type="name" 
               placeholder='Name' 
-              value={usename}
-               onChange={(e) => setUsername(e.target.value)}/>
+              value={username}
+               onChange={UserNAme1}/>
+               <span style={{color:"white"}}>{uMes }</span>
            <br/>
            <br/>
 
            <input  className={style.inpu} 
             type="email"
             placeholder='email'
-            value={phone}
-             onChange={(e) => setPhone(e.target.value)}/>
+            value={email}
+             onChange={userEmailAdd}/>
+             <span style={{color:"white"}}>{message}</span>
                 <br/>
                 <br/>
               <input className={style.inpu} 
                placeholder='Password'
                 type="password"
                 value={password} 
-                onChange={(e) => setPassword(e.target.value)}/>
+                onChange={userPassword}/>
+                <span style={{color:"white"}}>{pwmessage}</span>
               <br/>
               <h5 className={style.h2}>Date of birth</h5>
               <ul className={style.li}>

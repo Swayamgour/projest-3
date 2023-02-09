@@ -28,7 +28,7 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 import './select.css'
-import { useNavigate } from "react-router-dom";
+import { json, useNavigate } from "react-router-dom";
 import { useRecoilState } from "recoil";
 import { useRecoilValue } from "recoil";
 
@@ -40,6 +40,8 @@ import profile from '../Middle_side/Images/Aman.png'
 export default function BasicSelect() {
 	const [age, setAge] = React.useState('');
 
+	const list  = JSON.parse(localStorage.getItem("list"))
+    console.log(list,  " i am from login sesstoin")
 	const handleChange = (event) => {
 		setAge(event.target.value);
 	};
@@ -49,12 +51,14 @@ export default function BasicSelect() {
 
 	const nevigate = useNavigate();
 	const logout = () => {
-
+       
 		setIsLog(false);
 		alert("log out successfully ✅")
 		nevigate('/Login')
 
 	}
+    
+
 	return (
 		<div className='logout'>
 			<Box sx={{ minWidth: 12, outline: "none" }}>
@@ -66,9 +70,11 @@ export default function BasicSelect() {
 						outline:"none",
 						border:"none"
 
-					}}><InputLabel id="demo-simple-select-label"><img width="30px"
+					}}><InputLabel id="demo-simple-select-label">
+						<img width="30px"
 						height="30px"
-						style={{ borderReadies: "20px" ,outline:"none",
+						style={{ borderReadies: "20px" 
+						,outline:"none",
 						border:"none"}}
 						src={profile} /> SwayamGaur</InputLabel></div>
 					<Select

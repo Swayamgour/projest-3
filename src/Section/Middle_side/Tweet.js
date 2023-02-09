@@ -1,5 +1,5 @@
 import style from './Tweet.module.css'
- import profile from  './Images/Aman.png'
+import profile from  './Images/Aman.png'
 import CollectionsIcon from '@mui/icons-material/Collections';
 import GifBoxOutlinedIcon from '@mui/icons-material/GifBoxOutlined';
 import ListOutlinedIcon from '@mui/icons-material/ListOutlined';
@@ -22,7 +22,7 @@ export default function Tweet ({isCloseBtnVisible = false , handleClickCloseBtn}
     const inputRef = useRef(null)
     const setNewlyAddedPost = useSetRecoilState(newlyAddedPostAtom)
     const loggedInUser = useRecoilValue(loggedInUserAtom)
-
+    //  console.log(setNewlyAddedPost)
 
         // to make twwet footer 
     const iconList = [
@@ -76,6 +76,7 @@ export default function Tweet ({isCloseBtnVisible = false , handleClickCloseBtn}
 
     // function to submit the twwet
     function handleSubmitTweet () {
+        
         setNewlyAddedPost({
             tweetText : inputTweet,
             tweetPic : image,
@@ -84,11 +85,14 @@ export default function Tweet ({isCloseBtnVisible = false , handleClickCloseBtn}
             likesCount : 0,
             viewsCount : 0,
             tweetReplies : []
+            
         })
-        setInputTweet('')
+
+     setInputTweet('')
         setImage('')
-        handleClickCloseBtn()
+      handleClickCloseBtn()
         inputRef.current.value =""
+         console.log(setNewlyAddedPost)
     }
     return(
         <div >

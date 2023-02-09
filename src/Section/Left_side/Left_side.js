@@ -130,7 +130,7 @@ import Tweet from '../Middle_side/Tweet';
              
      
        </div> */}
-       <Tweet />
+       <Tweet  style={{width:"100%" , height:"20vh"}} />
         </DialogActions>
         
       </BootstrapDialog>

@@ -1,4 +1,3 @@
-
 import style from './Middle_side.module.css'
 import Tweet from './Tweet'
 import PostCard from "../../pages/post-card/post-card"
@@ -6,7 +5,6 @@ import { userProfiles } from '../../const'
 import { newlyAddedPostAtom ,loggedInUserAtom} from '../../Recoil'
 import { useRecoilState, useRecoilValue } from 'recoil'
 import { useEffect, useState } from 'react'
-import { getUniqueCode } from '../../Helper'
 
 export default function Posts () {
     const [userProfileInfo , setUserProfileInfo] = useState(userProfiles)
@@ -47,6 +45,12 @@ export default function Posts () {
             ...postDetailsCopy
         ])
     },[loggedInUse])
+
+
+
+
+
+    
     return(
         <section className={style.postWrapper}>
             <header className={style.header}>

@@ -46,7 +46,7 @@ import style from './Singup.module.css'
 import Butten from '../../Atom/Butten'
 import { TfiTwitterAlt } from "react-icons/tfi";
 import { GrGoogle } from "react-icons/gr";
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 
 
 function Login() {
@@ -59,7 +59,9 @@ function Login() {
          nevigate('/Singnewpage')
       }
  
-    
+    const navigrateignuppage=()=>{
+      nevigate('/Login')
+    }
 
   return (
     <>
@@ -106,8 +108,10 @@ function Login() {
     </ul> 
        &nbsp;
        &nbsp; &nbsp;
-       <h5 className={style.h5}>Have an account already? <a href='Login' className={style.a}>Login</a></h5>
-             
+       {/* <h5 className={style.h5}>Have an account already? <a href='Login' className={style.a}>Login</a></h5> */}
+       <h5 className={style.h5}> Have an account already?  
+           <span  style={{color
+          :"blue"}} onClick={navigrateignuppage}> Login</span> </h5>
             
 
           
