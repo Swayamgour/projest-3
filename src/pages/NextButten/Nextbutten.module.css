@@ -1,5 +1,5 @@
 .main{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     background-color:rgba(91, 112, 131, 0.4);
     align-items: center;
@@ -8,7 +8,7 @@
 }
 .center{
     border: 1px solid black;
-    width: 30rem;
+    width: 28rem;
     height: 33rem;
    border-radius: 10px;
    background-color: black;
@@ -22,7 +22,7 @@
     border-radius: 50px;
     box-shadow: 2px 3px 6px 2px;
     width: 20rem;
-    margin-left: 5rem;
+    margin-left: 4rem;
     cursor: pointer;
 }
 .Butten:hover{
@@ -30,18 +30,18 @@
 }
 
 .tfi{
-    color: white;
-    margin-left: 14rem;
-    height: 3rem;
-    width: 2rem;
+    color:  white;
+    margin-left: 12rem;
+    height: 5rem;
+    width: 3rem;
 
 }
 .h2{
     color: white;
-   margin-left: 5.5rem;
+   margin-left: 4.5rem;
 }
 .line{
-    padding-bottom: 30px;
+    padding-bottom: 15px;
  }
  .or{
     color: white;
@@ -58,9 +58,8 @@
     color: white;
     border: 1px solid white;
     border-radius: 1px;
-    /* box-shadow: 2px 3px 6px 2px; */
-    width: 20rem;
-    margin-left: 2.8rem;
+    width: 90%;
+    margin-left: -1rem;
     height: 3rem;
 }
 
@@ -70,11 +69,11 @@
     border: 0;
     border-radius: 50px;
     box-shadow: 2px 3px 6px 2px;
-    width: 20rem;
-    margin-left: 5rem;
-    margin-top: 2rem;
+    width: 95%;
+    height: 3.5rem;
+    margin-left: 1rem;
+    margin-top: 14rem;
     cursor: pointer;
-    height: 3rem;
 }
 .But:hover{
     background-color: gray;
@@ -86,17 +85,16 @@
     border: 0;
     border-radius: 50px;
     border: 1px solid white;
-    /* box-shadow: 2px 3px 6px 2px; */
     width: 20rem;
-    margin-left: 5rem;
+    margin-left: 4rem;
     cursor: pointer;
 }
 .Butt:hover{
     background-color: gray;
 }
 .h5{
-    color: white;
-    margin-left: 10rem;
+    color: gray;
+    margin-left: 7rem;
     cursor: pointer;
 }
 
@@ -107,4 +105,284 @@
 }
 .a{
     text-decoration: none                                                        ;
+}
+
+
+
+@media screen and (max-width: 440px) {
+    .main{
+        width: 100vw;
+        height: 100vh;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        
+    }
+    .center{
+       
+        width: 90vw;
+        height: 33rem;
+       border-radius: 10px;
+       background-color: black;
+    
+        
+    }
+    .Butten{
+        background-color: white;
+        /* padding: 0.5rem 1rem; */
+        border: 0;
+        /* height: 1vh; */
+        border-radius: 50px;
+        box-shadow: 2px 3px 6px 2px;
+        width: 100%;
+         margin-left: .5rem;
+        cursor: pointer;
+    }
+    .Butten:hover{
+        background-color: gray;
+    }
+    
+    .tfi{
+        color: white;
+          margin-left: 40vw; 
+          margin-top: -1.5rem;
+        
+         display: flex;
+         justify-content: center;
+         
+        height: 5rem;
+        width: 3rem;
+    
+    }
+     .h2{
+        /* color: white; */
+        margin-left: 25vw;
+        margin-top: -1.5rem;
+       font-size: large;
+        /* display: flex;  */
+       /* justify-content: center;  */
+    }
+    .line{
+        padding-bottom: 15px;
+        margin-left: vw;
+       
+     }
+     .or{
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 10px;
+        height: 40px;
+       
+    }
+    .input{
+        background-color: black;
+        /* padding: 0.5rem 1rem; */
+        color: white;
+        border: 1px solid white;
+        border-radius: 10px;
+        /* box-shadow: 2px 3px 6px 2px; */
+        width: 100%;
+        margin-left: 0rem;
+        height: 4.5rem;
+    }
+    
+    .But{
+        background-color: white;
+        /* padding: 0.5rem 1rem; */
+        border: 0;
+        border-radius: 50px;
+        box-shadow: 2px 3px 6px 2px;
+        width:100%;
+        margin-left: 0.4rem;
+        margin-top: 10rem;
+        cursor: pointer;
+    }
+    .But:hover{
+        background-color: gray;
+    }
+    .Butt{
+        background-color: black;
+        color: white;
+        /* padding: 0.5rem 1rem; */
+        border: 0;
+        border-radius: 50px;
+        border: 1px solid white;
+        width: 100%;
+        margin-left: 0.4rem;
+        cursor: pointer;
+    }
+    .Butt:hover{
+        background-color: gray;
+    }
+    .h5{
+        color: gray;
+        margin-left: 0rem;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+    }
+    
+    
+    .img{
+       margin-right: 1rem;
+      
+    }
+    .a{
+        text-decoration: none                                                        ;
+    }
+   
+  }
+  /* @media screen and (min-width: 360px) {
+    .main{
+        width: 100%;
+        height: 100vh;
+        background-color:rgba(91, 112, 131, 0.4);
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+} */
+@media screen and (max-width: 10px) {
+    .main{
+        width: 100vw;
+        height: 100vh;
+        background-color:rgba(91, 112, 131, 0.4);
+        
+    }
+    .center{
+        border: 1px solid black;
+        width: 90vw;
+        height: 33rem;
+       border-radius: 10px;
+       background-color: black;
+    
+        
+    }
+    .Butten{
+        background-color: white;
+        /* padding: 0.5rem 1rem; */
+        border: 0;
+        border-radius: 50px;
+        box-shadow: 2px 3px 6px 2px;
+        width: 100%;
+         margin-left: .5rem;
+        cursor: pointer;
+    }
+    .Butten:hover{
+        background-color: gray;
+    }
+    
+    .tfi{
+        color: white;
+          margin-left: 0rem; 
+          /* margin-top: -1.5rem; */
+        
+         display: flex;
+         justify-content: center;
+         
+        height: 3rem;
+        width: 2rem;
+    
+    }
+     .h2{
+        /* color: white; */
+       margin-left: 0rem;
+       /* margin-top: -1.5rem; */
+       font-size: xx-large;
+        /* display: flex;  */
+       /* justify-content: center;  */
+    }
+    .line{
+        padding-bottom: 30px;
+        width: 20vw;
+        display: none;
+     }
+     .or{
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+       margin-top: -2rem;
+
+        /* flex-direction: row;
+        gap: 10px;
+        height: 40px; */
+    }
+    .input{
+        background-color: black;
+        /* padding: 0.5rem 1rem; */
+        color: white;
+        border: 1px solid white;
+        border-radius: 10px;
+        /* box-shadow: 2px 3px 6px 2px; */
+        width: 100%;
+        margin-left: 0rem;
+        height: 2rem;
+       margin-top: -2rem;
+
+    }
+    .h5{
+        display: none;
+    }
+    
+    .But{
+        background-color: white;
+        /* padding: 0.5rem 1rem; */
+        border: 0;
+        border-radius: 50px;
+        box-shadow: 2px 3px 6px 2px;
+        width:100%;
+        margin-left: 0rem;
+        margin-top: -2rem;
+        cursor: pointer;
+
+    }
+    .But:hover{
+        background-color: gray;
+    }
+    .Butt{
+        background-color: black;
+        color: white;
+        /* padding: 0.5rem 1rem; */
+        border: 0;
+        border-radius: 50px;
+        border: 1px solid white;
+        width: 100%;
+        margin-left: 0.4rem;
+        cursor: pointer;
+        height: auto;
+    }
+    .Butt:hover{
+        background-color: gray;
+    }
+    
+    
+    
+    .img{
+       margin-right: 1rem;
+      
+    }
+    .a{
+        text-decoration: none                                                        ;
+    }
+   
+  }
+  /* @media screen and (min-width: 360px) {
+    .main{
+        width: 100%;
+        height: 100vh;
+        background-color:rgba(91, 112, 131, 0.4);
+        align-items: center;
+        justify-content: center;
+        display: flex;
+    }
+} */
+
+@media screen and (max-width: 250px) {
+    .line{
+        display: none;
+    }
 }

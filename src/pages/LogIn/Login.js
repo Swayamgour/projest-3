@@ -3,7 +3,6 @@ import style from './Login.module.css'
 import Butten from '../../Atom/Butten'
 import { TfiTwitterAlt } from "react-icons/tfi";
 import { useNavigate } from 'react-router-dom';
-import { validEmail} from '../regex1';
 import { useRecoilState } from 'recoil';
 import { isLoginAtom } from '../../Recoil';
 

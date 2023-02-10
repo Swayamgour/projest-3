@@ -2,10 +2,8 @@ import { useEffect, useState } from 'react'
 import style from './Singnewpage.module.css'
 import Butten from '../../Atom/Butten'
 import { TfiTwitterAlt } from "react-icons/tfi";
-// import { validEmail, validPassword , validusername} from '../regex1';
 import { useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
-// import { isSineinupatom } from '../../Recoil';  
 import { isLoginAtom } from '../../Recoil';
 import { ValidEmail} from '../../Helper'
 import {validatPassword } from '../../Helper'
@@ -111,7 +109,7 @@ function Singnewpage() {
                 onChange={userPassword}/>
                 <span style={{color:"white"}}>{pwmessage}</span>
               <br/>
-              <h5 className={style.h2}>Date of birth</h5>
+              <h5 className={style.h5}>Date of birth</h5>
               <ul className={style.li}>
                 <li > 
                 This will not be shown publicly. Swayam Gaur own age, even if this  

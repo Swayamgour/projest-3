@@ -32,8 +32,8 @@ function Forget() {
        <TfiTwitterAlt className={style.tfi}/>
        &nbsp;
        <h1 className={style.h2}>Find your Twitter account</h1>
-       <li className={style.h6}>Enter the email, phone number, or swayam gaur associated with your account to </li>
-       <li className={style.h6}>change your password.</li>
+       <h5 className={style.h6}>Enter the email, phone number, or swayam gaur associated with your account to </h5>
+       <h5 className={style.h6}>change your password.</h5>
        &nbsp;
       <br/>
        &nbsp;
@@ -41,29 +41,7 @@ function Forget() {
        
               &nbsp;
               <input placeholder='Email,phone, usename' className={style.input} onChange={handelinput}/>
-              &nbsp;
               
-       &nbsp;
-       &nbsp; &nbsp;
-       <br/>
-       <br/>
-
-       <br/>
-
-       <br/>
-
-       <br/>
-       <br/>
-
-        <br/>
-
-        <br/>  
-        <br/>
-       <br/>
-
-       
-             
-            
 
       <Butten
        buttenText="Next"
