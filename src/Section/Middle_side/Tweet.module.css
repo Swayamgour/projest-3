@@ -1,4 +1,4 @@
-@media screen and (min-width : 1024px){
+@media screen and (max-width : 1600px){
     .imgWrapper{
         height: calc(48rem/16);
         width: calc(48rem/16);

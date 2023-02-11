@@ -18,7 +18,6 @@ import { HiPhotograph,HiChat } from "react-icons/hi";
 import { BsEmojiSmile ,BsFillChatTextFill ,BsApple } from "react-icons/bs";
 import { useNavigate } from 'react-router-dom';
 import Tweet from '../Middle_side/Tweet';
-// import CardArray from './Card_array/CardArray';
 
   function Left_side() {
   const [open, setOpen] = React.useState(false);
@@ -105,7 +104,7 @@ import Tweet from '../Middle_side/Tweet';
     )
     })}
     <div className={style.button}>
-    <Button  style={{ marginLeft:"1.7rem" ,width:"12rem",height:"3rem",borderRadius:"2rem",backgroundColor:"#6495ED",color:"white"}}  onClick={handleClickOpen}>
+    <Button  style={{ marginLeft:"1.7rem" ,width:"30%",height:"25%",borderRadius:"2rem",backgroundColor:"#6495ED",color:"white"}}  onClick={handleClickOpen}>
         Tweet
       </Button>
       <BootstrapDialog
@@ -114,7 +113,7 @@ import Tweet from '../Middle_side/Tweet';
         open={open}
       >
          
-         <DialogActions style={{width:'25rem', height:'16rem'}} >
+         <DialogActions style={{width:'100%', height:'16rem'}} >
         {/* <div className={style.profile}>
          <img style={{width:'3rem',height:'3rem' ,padding:'.3rem', borderRadius:"50%" }} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSxI8k6VYzsB5fNKN-6mrFfvNgoDQkWppXR4Q&usqp=CAU'></img>
        <input className={style.input} placeholder='what,s happening?'/> 

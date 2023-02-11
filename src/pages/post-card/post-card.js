@@ -32,11 +32,9 @@ export default function PostCard({userProfileInfo}) {
 
     // const picClick=()=>{
         function picClick(dataName) {
-           console.log(newProfile)
-           console.log(dataName , "i am  clkick")
+       
             setNewProfile(dataName);
             const paramsValue = dataName.handlerName.replace("@", "");
-            // alert("hello")
             navigate(`/Profile2/${paramsValue}`);
              setId(dataName);
           }
@@ -82,7 +80,7 @@ export default function PostCard({userProfileInfo}) {
                 <p className={style.tweetText}>
                     <Fragment>
                         <p>{tweet.tweets[0].tweetText}</p>
-                        <img  style={{width:"25vw", height:"50vh"}} src={tweet.tweets[0].tweetPic} alt="propfile pic" />
+                        <img  style={{width:"100%", height:"40vh"}} src={tweet.tweets[0].tweetPic} alt="propfile pic" />
                         <p>{organization}</p>
                     </Fragment>
                 </p>
@@ -97,6 +95,7 @@ export default function PostCard({userProfileInfo}) {
             <div className={style.hashtags}>
                 {  [...tweet.hastags? [tweet.hastags] : []].map(tag => (
                     <span>{tag}</span>
+                    // console.log(tag)
                 ))}
             </div>
 

@@ -9,7 +9,7 @@
      background-color: rgb(232,232,232);
      /* color: white; */
     font-weight: 900;
-     width:15rem ;
+     width:30% ;
      height: 1.8rem;
      cursor: pointer;
     /* position: sticky; */
@@ -86,4 +86,9 @@
 }
 .follow:hover{
     background-color:#6495ED ;
+}
+@media screen and (max-width:900px) {
+   .positoin{
+    width: 80%;
+   }
 }

@@ -1,26 +1,3 @@
-// import { style } from "@mui/system";
-// import React,{useEffect} from "react";
-// import { useNavigate } from "react-router-dom";
-// import { TfiTwitterAlt } from "react-icons/tfi";
-// import { useRecoilValue } from "recoil";
-// import { isLoginAtom } from "../../Recoil";
-
-
-// function Home() {
-// const isUserLoggedIn = useRecoilValue(isLoginAtom);
-//   const nevigate = useNavigate();
-// // //  const login=()=>
-// useEffect(() => {
-//  if (!isUserLoggedIn) {
-//    nevigate("/Login");
-//  }
-// });
-// const handelclick=()=>{
-// 	nevigate("/Login");
-// }
-
-// 	
-
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import InputLabel from '@mui/material/InputLabel';

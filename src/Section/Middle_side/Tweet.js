@@ -22,7 +22,7 @@ export default function Tweet ({isCloseBtnVisible = false , handleClickCloseBtn}
     const inputRef = useRef(null)
     const setNewlyAddedPost = useSetRecoilState(newlyAddedPostAtom)
     const loggedInUser = useRecoilValue(loggedInUserAtom)
-    //  console.log(setNewlyAddedPost)
+       console.log(setNewlyAddedPost ,"heloo")
 
         // to make twwet footer 
     const iconList = [
@@ -87,6 +87,7 @@ export default function Tweet ({isCloseBtnVisible = false , handleClickCloseBtn}
             tweetReplies : []
             
         })
+        console.log(setNewlyAddedPost , "tweet")
 
      setInputTweet('')
         setImage('')
@@ -106,7 +107,7 @@ export default function Tweet ({isCloseBtnVisible = false , handleClickCloseBtn}
             <div className={style.tweetHeadingWrapper}>
 
                 <div className={style.imgWrapper}>
-                    <img
+                    <img 
                         src = {loggedInUser?.profilePic || profile}
                         height = '100%'
                         width = '100%'

@@ -20,7 +20,80 @@
     /* border-radius: 1px solid black; */
     
 }
+
+.logo{
+    display: none;
+}
 .rightside{
     width: 30%;
     height: 100vh;
+}
+.iconsss{
+    display: flex;
+    justify-content: space-between;
+    display: none;
+}
+.twittlogo{
+    display: none;
+}
+
+@media screen and (max-width:866px) {
+    .LeftSide{
+        display: none;
+    }
+    .rightside{
+       
+        display: none;
+    }
+    .Main{
+        width: 100%;
+       height: 100vh;
+       display: flex;
+   }
+
+   .space{
+    width: 10%;
+    height: 100vh;
+    display: none;
+    
+   
+}
+   .middleside{
+    width: 100%;
+    height: 100vh;
+    /* border-radius: 1px solid black; */
+    
+}
+.iconsss{
+    display: flex;
+    justify-content: space-evenly;
+    position: fixed ;
+    bottom: 0;
+   height:10vh;
+   width: 100%;
+   align-items: center;
+   z-index: 999;
+   font-size: xx-large;
+   background-color: rgb(232,232,232);
+   
+}
+.logo{
+    display: unset ;
+     position: fixed ;
+     margin-top: 5rem;
+    color: black;
+    font-weight: 900; 
+   
+}
+.twittlogo{
+    display: unset;
+    bottom: 0;
+    position: fixed;
+   margin-left: 80%;
+   width: 10%;
+   margin-bottom: 7rem;
+   border-radius: 50%;
+}
+
+
 }

@@ -47,17 +47,21 @@ export default function Posts () {
     },[loggedInUse])
 
 
-
+ const handelopen =()=>{
+    alert("hello")
+ }
 
 
     
     return(
         <section className={style.postWrapper}>
-            <header className={style.header}>
-                <p className={style.heading}>Home</p>
+            <header className={style.header1}>
+                <p className={style.heading}>
+                    <span  className={style.home}>Home</span>
+                    <span className={style.hii} onClick={handelopen}><img className={style.profilelogo} src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUncw5PB5syw9BIoymTrwyOjAqRlTZC1Rkew&usqp=CAU' alt='helo'/></span></p>
                 <div className={style.headerOptionWrapper}>
-                    <p style={{marginRight:"12rem"}}>For You</p>
-                   <p>Following</p> 
+                    <p style={{marginRight:"0rem"}} className={style.foryou}>For You</p>
+                   <p  className={style.foryou}>Following</p> 
                 </div>
             </header>
 
@@ -69,6 +73,7 @@ export default function Posts () {
                     />
                 ))}
             </div>
+            
 
         </section>
     )
