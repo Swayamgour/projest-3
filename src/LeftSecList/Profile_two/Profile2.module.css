@@ -1,0 +1,317 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  Main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+  }
+  
+  .space1 {
+    width: 10%;
+    /* display: none; */
+  
+  }
+  
+  .space {
+    width: 10%;
+    height: 100vh;
+    display: none;
+  }
+  
+  .LeftSide {
+    width: 20%;
+    height: 100vh;
+  }
+  
+  .middleside {
+    width: 35%;
+    height: 100vh;
+    /* border-radius: 1px solid black; */
+  
+  }
+  
+  .logo {
+    display: none;
+  }
+  
+  .rightside {
+    width: 25%;
+    height: 100vh;
+  }
+  
+  .iconsss{
+    display: flex;
+    justify-content: space-between;
+    display: none;
+  }
+  
+  
+  .wrapper {
+    justify-content: space-between;
+  }
+  
+  nav {
+    background-color: lightblue;
+    grid-area: sidebar;
+    height: 100%;
+  }
+  
+  main {
+    background-color: lightgoldenrodyellow;
+    grid-area: main;
+    height: 100%;
+  }
+  
+  
+  
+  .cover {
+    height: 200px;
+    width: 98%;
+    background-color: gray;
+    /* background-image: url('https://pbs.twimg.com/profile_banners/807095/1584666392/1500x500'); */
+    background-size: cover;
+    /* position: fixed; */
+  
+  }
+  
+  .userprofile {
+    background: white;
+    /* // height: 200px; */
+    width: 100%;
+    /* padding: 0 10px; */
+  }
+  
+  .useractions {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .button {
+    color: rgba(29, 161, 242, 1.00);
+    background-color: white;
+    border: 1px solid rgba(29, 161, 242, 1.00);
+    border-radius: 20px;
+  }
+  
+  .avatar {
+    /* background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSgxUvSQG0W-4Z-eoiovRXTMFzfJLE7ppEs1w&usqp=CAU'); */
+    background-size: contain;
+    height: 100px;
+    width: 100px;
+    border-radius: 50px;
+    margin-top: -50px;
+    border: 3px solid white;
+  }
+  
+  .actionbuttons {
+    margin-top: 10px;
+    display: flex;
+  }
+  
+  .morebtn,
+  .followbtn {
+    height: 30px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .followbtn {
+    padding: 5px 10px;
+  }
+  
+  .morebtn {
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+  }
+  
+  
+  .tweetscontainer {
+    height: 600px;
+  }
+  
+  
+  
+  .metadata {
+    display: flex;
+    flex-wrap: wrap;
+    color: grey;
+  
+  
+  
+  }
+  
+  div {
+    flex: none;
+    /* margin-right: 10px; */
+  }
+  
+  .link a {
+    color: rgba(29, 161, 242, 1.00);
+    text-decoration: none;
+  }
+  
+  .username {
+    font-weight: lighter;
+    color: gray;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    margin-bottom: 5px;
+  }
+  
+  .following,
+  .follower {
+    display: inline-block;
+    margin-right: 20px;
+  
+  
+  }
+  
+  .follownum {
+    font-weight: bold;
+  }
+  
+  .commonfollows {
+    margin-top: 10px;
+    font-weight: lighter;
+  }
+  
+  .aside {
+    background-color: lightcoral;
+    grid-area: aside;
+    height: 100%;
+  }
+  
+  .Main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+  }
+  
+  .space {
+    width: 10%;
+    height: 100vh;
+  
+  
+  }
+  
+  .LeftSide {
+    width: 20%;
+    height: 100vh;
+  }
+  
+  .middleside {
+    width: 34%;
+    height: 100vh;
+    /* border-radius: 1px solid black; */
+  
+  }
+  
+  .rightside {
+    width: 30%;
+    height: 100vh;
+  }
+  
+  
+  @media screen and (max-width : 866px) {
+  
+    .Main {
+      width: 100%;
+  
+    }
+  
+    .LeftSide {
+      display: none;
+    }
+  
+    .rightside {
+      display: none;
+    }
+  
+    .middleside {
+      width: 90%;
+      margin-left: 10%;
+    }
+  
+    .space1 {
+      display: none;
+    }
+  
+    .space {
+      width: 10%;
+      display: unset;
+      position: fixed;
+      margin-left: 2%;
+      height: 100vh;
+    }
+  
+    .twitterLogo {
+      margin-left: -10%;
+      color: #6495ED;
+      padding-top: .5rem;
+      width: 70%;
+      height: 4rem;
+      border-radius: 40%;
+      cursor: pointer;
+  
+    }
+  
+    .twittlogo {
+      display: unset;
+      margin-left: -15%;
+      margin-top: 50%;
+      width: 90%;
+      border-radius: 50%;
+    }
+  }
+  
+  @media screen and (max-width : 500px) {
+    .Main {
+      width: 100%;
+  
+    }
+  
+    .LeftSide {
+      display: none;
+    }
+  
+    .rightside {
+      display: none;
+    }
+  
+    .middleside {
+      width: 90%;
+      margin-left: 10%;
+    }
+  
+    .space1 {
+      display: none;
+    }
+  
+    .space {
+      display: none;
+    }
+    .iconsss{
+      display: unset;
+    }
+    .iconsss{
+      display: flex;
+      justify-content: space-evenly;
+      position: fixed ;
+      bottom: 0;
+     height:10vh;
+     width: 100%;
+     align-items: center;
+     z-index: 999;
+     font-size: xx-large;
+     background-color: rgb(232,232,232);
+     
+  }
+  }

@@ -118,6 +118,8 @@ const userProfiles = [
                 retweetCount: 700,
                 likesCount: 900,
                 viewsCount: '100k',
+                tweetPic1: 'https://lh3.googleusercontent.com/pasZP7Q7djnEfYziWLb-U5F1Ga_YpGXbxoggi_H3YuCFZeXPBij6l7SuJRnh39osyU0omD-OON3O9w46qNWJ7eFhNwo1LOe0PU7gANdMGHNYgo6mPlIVJKk1AoJJVy2D7bptiaUqpw=w1920-h1080',
+
                 refLink: 'https://www.globalwildlife.org/blog/',
                 TweetReplies: [
                     {

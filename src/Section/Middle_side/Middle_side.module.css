@@ -12,6 +12,7 @@
     width: 34.7%;
     z-index: 999;
     opacity: .8;
+    justify-content: space-evenly;
 
 }
 
@@ -58,6 +59,7 @@
 @media screen  and (max-width:866px){
     .header1 {
        width: 100%;
+       /* font-size: xx-large; */
     } 
     
     .postWrapper {
@@ -70,11 +72,17 @@
     }
     .hii{
         display: unset;
+        font-weight: 900;
+
         
     }
     .profilelogo{
         width: 70px;
         border-radius: 50%;
+    }
+    .profilelogoone{
+        width: 80%;
+
     }
 }
 

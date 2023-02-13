@@ -17,3 +17,15 @@
     /* padding-top: 5rem; */
     outline: none;
 }
+
+@media screen and (max-width : 1100px){
+    .logout{
+        width: 60%;
+    }
+}
+@media screen and (max-width : 930px){
+    .logout{
+        width: 60%;
+        margin-right: 10rem;
+    }
+}

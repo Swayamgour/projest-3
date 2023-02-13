@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react'
 import { useNavigate } from 'react-router-dom';
  import {userProfileInfos} from '../../Recoil'
  import {forPassingid} from '../../Recoil'
+ 
 
 export default function PostCard({userProfileInfo}) {
     const navigate = useNavigate()
